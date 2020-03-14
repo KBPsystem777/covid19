@@ -1,5 +1,5 @@
 {
-  "name": "create-react-app",
+  "name": "covid19",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,6 +8,7 @@
     "react-scripts": "2.1.1"
   },
   "scripts": {
+    "start": "react-scripts start",
     "dev": "BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
