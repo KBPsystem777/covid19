@@ -18,9 +18,9 @@ function Summary() {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container summary-padding">
+      <h1 className="text-center">🦠 COVID19 Global Tracker 🌐</h1>
       <div className="jumbotron">
-        <h1 className="text-center">COVID19 Global Tracker</h1>
         <div className="jumbotron">
           <ul className="numbers">
             <li>Cases: {data.cases}</li>
