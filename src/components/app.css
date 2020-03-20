@@ -9,6 +9,15 @@
   width: 100%; /* Full width */
 }
 
+.ph-cases-padding-top {
+  padding-top: 2em;
+}
+
+.ph-title-center {
+  text-align: center !important;
+  padding-top: 2em;
+}
+
 .summary-padding {
   padding-top: 8em;
 }

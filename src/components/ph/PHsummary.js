@@ -22,24 +22,30 @@ function PHsummary() {
 
   return (
     <div className="container summary-padding">
-      <h1 className="text-center">🦠 COVID19 | Philippines</h1>
-      <div className="row">
-        <h2>Total Cases Count: {data.length}</h2>
-      </div>
-      <div className="jumbotron">
-        <ul>
+      <h1 className="text-center">🦠 Philippines</h1>
+      <div>
+        <h2 className="ph-title-center">Confirmed Cases: {data.length}</h2>
+        <div className="ph-cases-padding-top">
           {data.map((cases, index) => {
             return (
-              <Fragment>
-                <div key={cases.length + 2}>
+              <Fragment key={index} className="row">
+                <div className="jumbotron">
                   <h4>Case #{index + 1}</h4>
                   <h5>Status: {cases.status}</h5>
+                  <p>Age: {cases.age}</p>
+                  <p>Gender: {cases.gender}</p>
+                  <p>Nationality: {cases.nationality}</p>
+                  <p>
+                    Travel History Abroad?:{" "}
+                    {cases.had_recent_travel_history_abroad}
+                  </p>
                   <p>Admitted: {cases.hospital_admitted_to}</p>
+                  <p>Info: {cases.other_information}</p>
                 </div>
               </Fragment>
             );
           })}
-        </ul>
+        </div>
       </div>
     </div>
   );
