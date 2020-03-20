@@ -17,8 +17,8 @@ function Header() {
           <Nav className="ml-auto">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <a className="nav-link" href="/news">
-                  News
+                <a className="nav-link" href="/ph">
+                  Philippines
                 </a>
               </li>
               <li className="nav-item">
