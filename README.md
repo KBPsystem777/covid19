@@ -10,7 +10,7 @@ This project focuses in disseminating public information about COVID19 cases in 
 
 See the site in action at https://www.covid2019.now.sh (https://www.covid19ph.now.sh redirects here)
 
-🇵🇭 Philippines data is located here: https://www.covid2019.now.sh/ph
+🇵🇭 Philippines data is located here: https://covid2019.now.sh/ph
 
 #### Data Sources
 
