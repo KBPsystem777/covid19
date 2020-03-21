@@ -1,29 +1,26 @@
-![React Logo](https://github.com/zeit/now/blob/master/packages/frameworks/logos/react.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# React Example
+![covid2019](https://raw.githubusercontent.com/KBPsystem777/covid19/master/public/fav/favicon.ico)
 
-This directory is a brief example of a [React](https://reactjs.org/) app with [Serverless Functions](https://zeit.co/docs/v2/serverless-functions/introduction) that can be deployed with ZEIT Now and zero configuration.
+# covid2019 tracker 🦠
 
-## Deploy Your Own
+This project focuses in disseminating public information about COVID19 cases in the Philippines and global case summary.
 
-Deploy your own React project, along with Serverless Functions, with ZEIT Now.
+## Live Project
 
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/zeit/now/tree/master/examples/create-react-app-functions)
+See the site in action at https://www.covid2019.now.sh (https://www.covid19ph.now.sh redirects here)
 
-_Live Example: https://create-react-app.now-examples.now.sh/_
+🇵🇭 Philippines data is located here: https://www.covid2019.now.sh/ph
 
-### How We Created This Example
+#### Data Sources
 
-To get started with React, along with [Serverless Functions](https://zeit.co/docs/v2/serverless-functions/introduction), with ZEIT Now, you can use the [Create-React-App CLI](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app) to initialize the project:
+Data is being fetched from the following sources:
 
-```shell
-$ npx create-react-app my-app
-```
+- https://coronavirus-ph-api.now.sh
+- https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_the_Philippines
 
-### Deploying From Your Terminal
+#### Deployed using Zeit Now
 
-You can deploy your new React project, along with [Serverless Functions](https://zeit.co/docs/v2/serverless-functions/introduction), with a single command from your terminal using [Now CLI](https://zeit.co/download):
+[![Deployed using ZEIT Now](https://assets.zeit.co/image/upload/q_auto/front/assets/design/zeit-black-triangle.svg)](zeit.co/kbpsystem)
 
-```shell
-$ now
-```
+#### This is the 💣 developed by [KBPsystem](https://koleenbp.com)
