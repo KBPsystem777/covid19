@@ -16,7 +16,6 @@ function PHsummary() {
 
   useEffect(() => {
     getData();
-    console.log(data);
     setData(data);
   }, []);
 
@@ -28,7 +27,7 @@ function PHsummary() {
         <div className="ph-cases-padding-top">
           {data.map((cases, index) => {
             return (
-              <Fragment key={index} className="row">
+              <Fragment key={index}>
                 <div className="jumbotron">
                   <h4>Case #{index + 1}</h4>
                   <h5>Status: {cases.status}</h5>
