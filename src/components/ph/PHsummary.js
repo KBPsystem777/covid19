@@ -4,7 +4,7 @@ import React, { Fragment, useEffect, useState } from "react";
 const covidEndPoint = "https://coronavirus-ph-api.now.sh/cases";
 
 function PHsummary() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(["Loading"]);
 
   async function getData() {
     setTimeout(() => {
