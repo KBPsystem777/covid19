@@ -1,7 +1,7 @@
-Let CACHE_NAME = 'COVID2019';
-Let urlsToCache = [
+let CACHE_NAME = 'COVID2019';
+let urlsToCache = [
   '/',
-  '/completed'
+  '/ph'
 ];
 
 // Install a service worker
@@ -33,7 +33,7 @@ self.addEventListener('fetch', event => {
 
 // Update a service worker
 self.addEventListener('activate', event => {
-  Let cacheWhitelist = ['your-app-name'];
+  let cacheWhitelist = ['your-app-name'];
   event.waitUntil(
     caches.keys().then(cacheNames => {
       return Promise.all(
