@@ -28,7 +28,7 @@ function PHsummary() {
     return (
       <div className="card bg-light mb-3" id="send-to-back">
         <div className="card-header">
-          <h4 className="card-title">Local Status</h4>
+          <h4>Local Status</h4>
         </div>
         <div className="card-body">
           <h5 className="card-text">Recovered: {recovered.length}</h5>

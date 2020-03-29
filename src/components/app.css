@@ -25,3 +25,7 @@
 #send-to-back {
   display: contents;
 }
+
+#about-padding-top {
+  padding-top: 8em;
+}
