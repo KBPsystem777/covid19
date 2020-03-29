@@ -12,16 +12,23 @@ function About() {
         <div>
           <h3>Data Sources</h3>
           <p>Data is being fetched from the following sources:</p>
-          <li>https://coronavirus-ph-api.now.sh</li>
-          <li>
-            https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_the_Philippines
-          </li>
+          <ul>
+            <li>https://coronavirus-ph-api.now.sh</li>
+            <li>
+              https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_the_Philippines
+            </li>
+          </ul>
+          <br />
         </div>
-        <p className="text-center">
-          This is the bomb developed by{" "}
-          <a href="https://koleenbp.com">KBPsystem</a>
+        <h4>Contribute</h4>
+        <p>
+          <a href="https://github.com/kbpsystem777/covid19">GitHub</a>
         </p>
       </div>
+      <p className="text-center">
+        This is the bomb developed by{" "}
+        <a href="https://koleenbp.com">KBPsystem</a>
+      </p>
     </div>
   );
 }
