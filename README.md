@@ -1,3 +1,5 @@
+![Node.js CI](https://github.com/KBPsystem777/covid19/workflows/Node.js%20CI/badge.svg)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ![covid2019](https://raw.githubusercontent.com/KBPsystem777/covid19/master/public/fav/favicon.ico)
