@@ -21,3 +21,7 @@
 .summary-padding {
   padding-top: 8em;
 }
+
+#send-to-back {
+  display: contents;
+}

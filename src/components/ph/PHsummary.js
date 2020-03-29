@@ -1,6 +1,4 @@
 import React, { Fragment, useEffect, useState } from "react";
-//import Example1 from "./test";
-//import NumberFormat from "react-number-format";
 
 const covidEndPoint = "https://coronavirus-ph-api.now.sh/cases";
 
@@ -20,11 +18,36 @@ function PHsummary() {
     setData(data);
   }, []);
 
+  // Get patient's status
+  const recovered = data.filter(item => item.status === "Recovered");
+  const died = data.filter(item => item.status === "Died");
+  const admitted = data.filter(item => item.status === "Admitted");
+  const toBeIdentified = data.filter(item => item.status === "TBA");
+
+  function Card() {
+    return (
+      <div className="card bg-light mb-3" id="send-to-back">
+        <div className="card-header">
+          <h4 className="card-title">Local Status</h4>
+        </div>
+        <div className="card-body">
+          <h5 className="card-text">Recovered: {recovered.length}</h5>
+          <h5 className="card-text">Admitted: {admitted.length}</h5>
+          <h5 className="card-text">PUI/PUM: {toBeIdentified.length}</h5>
+          <h5 className="card-text">Deaths: {died.length}</h5>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="container summary-padding">
       <h1 className="text-center">🦠 Philippines</h1>
       <div>
         <h2 className="ph-title-center">Confirmed Cases: {data.length}</h2>
+        <div className="jumbotron">
+          <Card />
+        </div>
         <div className="ph-cases-padding-top">
           {data.map((cases, index) => {
             return (
