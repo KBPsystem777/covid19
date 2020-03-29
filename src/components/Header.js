@@ -17,17 +17,21 @@ function Header() {
           <Nav className="ml-auto">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <a className="nav-link" href="/ph">
+                <a className="nav-link" href="/ph" onClick={toggle}>
                   Philippines
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/about">
+                <a className="nav-link" href="/about" onClick={toggle}>
                   About
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="https://www.koleenbp.com">
+                <a
+                  className="nav-link"
+                  href="https://www.koleenbp.com"
+                  onClick={toggle}
+                >
                   KBPsystem
                 </a>
               </li>

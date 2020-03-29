@@ -1,6 +1,6 @@
 {
   "short_name": "COVID19",
-  "name": "COVID19 Cases Tracker by koleenbp.com",
+  "name": "Global COVID19 Cases Tracker",
   "icons": [
     {
       "src": "/fav/img/logo.png",
@@ -23,7 +23,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#f0f2f5",
   "theme_color": "#9900ff",
