@@ -1,10 +1,11 @@
 import React, { Fragment, useEffect, useState } from "react";
+//import Example1 from "./test";
 //import NumberFormat from "react-number-format";
 
 const covidEndPoint = "https://coronavirus-ph-api.now.sh/cases";
 
 function PHsummary() {
-  const [data, setData] = useState(["Loading"]);
+  const [data, setData] = useState(["LOADING..."]);
 
   async function getData() {
     setTimeout(() => {
