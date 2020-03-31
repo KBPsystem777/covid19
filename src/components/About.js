@@ -32,8 +32,11 @@ function About() {
         </li>
       </div>
       <p className="text-center">
-        This is the <span role="img">💣</span>developed by{" "}
-        <a href="https://koleenbp.com">KBPsystem - 2020</a>
+        This is the{" "}
+        <span role="img" aria-label="Bomb">
+          💣
+        </span>
+        developed by <a href="https://koleenbp.com">KBPsystem - 2020</a>
       </p>
     </div>
   );

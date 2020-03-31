@@ -1,14 +1,12 @@
 import React, { Fragment, useEffect, useState } from "react";
-import axios from "axios";
-const covidEndPoint = "https://coronavirus-ph-api.now.sh/cases";
+const covidEndPoint = "https://coronavirus-ph-api.herokuapp.com/cases";
 
 function PHsummary() {
   const [data, setData] = useState(["LOADING..."]);
 
   async function getData() {
     setTimeout(() => {
-      axios
-        .get(covidEndPoint)
+      fetch(covidEndPoint)
         .then(res => res.json())
         .then(setData);
     }, 100);
@@ -27,17 +25,14 @@ function PHsummary() {
 
   function Card() {
     return (
-      <div className="card bg-light mb-3" id="send-to-back">
-        <div className="card-header">
-          <h4>Local Status</h4>
+      <Fragment>
+        <div className="text-center">
+          <h5>Recovered: {recovered.length}</h5>
+          <h5>Admitted: {admitted.length}</h5>
+          <h5>PUI/PUM: {toBeIdentified.length}</h5>
+          <h5>Deaths: {died.length}</h5>
         </div>
-        <div className="card-body">
-          <h5 className="card-text">Recovered: {recovered.length}</h5>
-          <h5 className="card-text">Admitted: {admitted.length}</h5>
-          <h5 className="card-text">PUI/PUM: {toBeIdentified.length}</h5>
-          <h5 className="card-text">Deaths: {died.length}</h5>
-        </div>
-      </div>
+      </Fragment>
     );
   }
 
