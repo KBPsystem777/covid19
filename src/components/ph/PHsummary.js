@@ -1,8 +1,10 @@
 import React, { Fragment, useEffect, useState } from "react";
+import Chart from "react-apexcharts";
+
 const covidEndPoint = "https://coronavirus-ph-api.herokuapp.com/cases";
 
 function PHsummary() {
-  const [data, setData] = useState(["LOADING..."]);
+  const [data, setData] = useState([]);
 
   async function getData() {
     setTimeout(() => {
@@ -14,7 +16,6 @@ function PHsummary() {
 
   useEffect(() => {
     getData();
-    setData(data);
   }, []);
 
   // Get patient's status
@@ -22,6 +23,39 @@ function PHsummary() {
   const died = data.filter(item => item.status === "Died");
   const admitted = data.filter(item => item.status === "Admitted");
   const toBeIdentified = data.filter(item => item.status === "TBA");
+
+  const chartSeries = [
+    recovered.length,
+    died.length,
+    admitted.length + toBeIdentified.length
+  ];
+  const chartOptions = {
+    labels: ["Recovered", "Deaths", "PUIs/PUMs"],
+    colors: ["#4CAF50", "#FF5722", "#673AB7"],
+    responsive: [
+      {
+        breakpoint: 1000,
+        options: {
+          plotOptions: {
+            bar: {
+              horizontal: false
+            }
+          },
+          legend: {
+            position: "bottom"
+          }
+        }
+      }
+    ],
+    legend: {
+      show: true,
+      position: "bottom"
+    },
+    title: {
+      text: "Local Status",
+      align: "center"
+    }
+  };
 
   function Card() {
     return (
@@ -42,7 +76,9 @@ function PHsummary() {
       <div>
         <h2 className="ph-title-center">Confirmed Cases: {data.length}</h2>
         <div className="jumbotron">
-          <Card />
+          <div id="chart" className="donut">
+            <Chart options={chartOptions} series={chartSeries} type="donut" />
+          </div>
         </div>
         <div className="ph-cases-padding-top">
           {data.map((cases, index) => {
