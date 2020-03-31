@@ -36,11 +36,6 @@ function PHsummary() {
       {
         breakpoint: 1000,
         options: {
-          plotOptions: {
-            bar: {
-              horizontal: false
-            }
-          },
           legend: {
             position: "bottom"
           }
@@ -56,19 +51,6 @@ function PHsummary() {
       align: "center"
     }
   };
-
-  function Card() {
-    return (
-      <Fragment>
-        <div className="text-center">
-          <h5>Recovered: {recovered.length}</h5>
-          <h5>Admitted: {admitted.length}</h5>
-          <h5>PUI/PUM: {toBeIdentified.length}</h5>
-          <h5>Deaths: {died.length}</h5>
-        </div>
-      </Fragment>
-    );
-  }
 
   return (
     <div className="container summary-padding">
