@@ -16,7 +16,6 @@ function Summary() {
 
   useEffect(() => {
     getData();
-    console.log(data);
   }, []);
 
   return (
