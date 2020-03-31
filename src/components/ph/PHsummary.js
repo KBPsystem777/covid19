@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
-
+import axios from "axios";
 const covidEndPoint = "https://coronavirus-ph-api.now.sh/cases";
 
 function PHsummary() {
@@ -7,7 +7,8 @@ function PHsummary() {
 
   async function getData() {
     setTimeout(() => {
-      fetch(covidEndPoint)
+      axios
+        .get(covidEndPoint)
         .then(res => res.json())
         .then(setData);
     }, 100);
