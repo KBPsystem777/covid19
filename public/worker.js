@@ -1,5 +1,5 @@
 let CACHE_NAME = "COVID2019";
-let urlsToCache = ["/", "/completed"];
+let urlsToCache = ["/", "/ph", "/about"];
 
 // Install a service worker
 self.addEventListener("install", event => {
