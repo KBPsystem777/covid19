@@ -52,14 +52,14 @@ function Summary() {
   return (
     <div className="container summary-padding">
       <h1 className="text-center">🦠 COVID19 Global</h1>
-      <div className="jumbotron">
+      <div className="sum-margin">
         <div id="chart" className="donut">
           <Chart options={chartOptions} series={chartSeries} type="donut" />
         </div>
-        <div className="jumbotron">
+        <div>
           <ul className="numbers">
             <li>
-              Cases:
+              Cases:{" "}
               <NumberFormat
                 value={data.cases}
                 thousandSeparator={true}
