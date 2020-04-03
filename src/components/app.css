@@ -19,8 +19,16 @@
   padding-top: 1.5em;
 }
 
+.ph-padding-top {
+  padding-top: 0em;
+}
+
 .summary-padding {
   padding-top: 4.5em;
+}
+
+.sum-margin {
+  margin: 25px;
 }
 
 #send-to-back {
@@ -35,4 +43,5 @@
   max-width: 430px;
   margin: 35px auto;
   opacity: 0.9;
+  padding-top: 2em;
 }

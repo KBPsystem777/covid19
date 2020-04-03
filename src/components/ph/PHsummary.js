@@ -57,7 +57,7 @@ function PHsummary() {
       <h1 className="text-center">🦠 Philippines</h1>
       <div>
         <h2 className="ph-title-center">Confirmed Cases: {data.length}</h2>
-        <div className="jumbotron">
+        <div className="ph-padding-top">
           <div id="chart" className="donut">
             <Chart options={chartOptions} series={chartSeries} type="donut" />
           </div>
