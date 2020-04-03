@@ -27,7 +27,7 @@ self.addEventListener("fetch", event => {
 
 // Update a service worker
 self.addEventListener("activate", event => {
-  let cacheWhitelist = ["your-app-name"];
+  let cacheWhitelist = ["COVID2019"];
   event.waitUntil(
     caches.keys().then(cacheNames => {
       return Promise.all(
