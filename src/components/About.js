@@ -13,7 +13,11 @@ function About() {
           <h3>Data Sources</h3>
           <p>Data is being fetched from the following sources:</p>
           <ul>
-            <li>https://coronavirus-ph-api.now.sh</li>
+            <li>
+              <a href="https://coronavirus-ph-api.herokuapp.com">
+                https://coronavirus-ph-api.herokuapp.com
+              </a>
+            </li>
             <li>
               <a href="https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_the_Philippines">
                 COVID19 in the Philippines
@@ -37,13 +41,16 @@ function About() {
             <h4>Contacts</h4>
             <ul>
               <li>
+                <a href="https://www.koleenbp.com">Developer website</a>
+              </li>
+              <li>
                 <a href="https://gitter.im/kbpsystem777/covid2019">Gitter</a>
               </li>
               <li>
                 <a href="https://covid2019nowsh.slack.com">Slack</a>
               </li>
               <li>
-                Email:
+                Email:{" "}
                 <a href="mailto:koleen.bp@outlook.com">koleen.bp@outlook.com</a>
               </li>
             </ul>
