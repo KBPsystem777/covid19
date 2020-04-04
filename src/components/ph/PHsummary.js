@@ -9,7 +9,7 @@ function PHsummary() {
   async function getData() {
     setTimeout(() => {
       fetch(covidEndPoint)
-        .then(res => res.json())
+        .then((res) => res.json())
         .then(setData);
     }, 100);
   }
@@ -19,15 +19,15 @@ function PHsummary() {
   }, []);
 
   // Get patient's status
-  const recovered = data.filter(item => item.status === "Recovered");
-  const died = data.filter(item => item.status === "Died");
-  const admitted = data.filter(item => item.status === "Admitted");
-  const toBeIdentified = data.filter(item => item.status === "TBA");
+  const recovered = data.filter((item) => item.status === "Recovered");
+  const died = data.filter((item) => item.status === "Died");
+  const admitted = data.filter((item) => item.status === "Admitted");
+  const toBeIdentified = data.filter((item) => item.status === "TBA");
 
   const chartSeries = [
     recovered.length,
     died.length,
-    admitted.length + toBeIdentified.length
+    admitted.length + toBeIdentified.length,
   ];
   const chartOptions = {
     labels: ["Recovered", "Deaths", "PUIs/PUMs"],
@@ -37,19 +37,19 @@ function PHsummary() {
         breakpoint: 1000,
         options: {
           legend: {
-            position: "bottom"
-          }
-        }
-      }
+            position: "bottom",
+          },
+        },
+      },
     ],
     legend: {
       show: true,
-      position: "bottom"
+      position: "bottom",
     },
     title: {
       text: "Local Status",
-      align: "center"
-    }
+      align: "center",
+    },
   };
 
   return (
@@ -77,7 +77,7 @@ function PHsummary() {
                     {cases.had_recent_travel_history_abroad}
                   </p>
                   <p>Admitted: {cases.hospital_admitted_to}</p>
-                  <p>Info: {cases.other_information}</p>
+                  <p>Address: {cases.resident_of}</p>
                 </div>
               </Fragment>
             );
