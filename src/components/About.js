@@ -21,15 +21,34 @@ function About() {
             </li>
           </ul>
           <br />
+          <div>
+            <h4>Contribute</h4>
+            <ul>
+              <li>
+                <a href="https://github.com/kbpsystem777/covid19">GitHub</a>
+              </li>
+              <li>
+                Any other suggestions/questions, send email to{" "}
+                <a href="mailto:koleen.bp@outlook.com">koleen.bp@outlook.com</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contacts</h4>
+            <ul>
+              <li>
+                <a href="https://gitter.im/kbpsystem777/covid2019">Gitter</a>
+              </li>
+              <li>
+                <a href="https://covid2019nowsh.slack.com">Slack</a>
+              </li>
+              <li>
+                Email:
+                <a href="mailto:koleen.bp@outlook.com">koleen.bp@outlook.com</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <h4>Contribute</h4>
-        <li>
-          <a href="https://github.com/kbpsystem777/covid19">GitHub</a>
-        </li>
-        <li>
-          Any other suggestions/questions, send email to{" "}
-          <a href="mailto:koleen.bp@outlook.com">koleen.bp@outlook.com</a>
-        </li>
       </div>
       <p className="text-center">
         This is the{" "}

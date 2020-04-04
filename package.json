@@ -2,6 +2,7 @@
   "name": "covid19",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://covid2019.now.sh",
   "dependencies": {
     "apexcharts": "^3.17.1",
     "react": "^16.6.1",
@@ -24,5 +25,9 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@babel/preset-react": "^7.9.4",
+    "babel-preset-react-app": "^9.1.2"
+  }
 }
