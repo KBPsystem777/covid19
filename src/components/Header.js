@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler } from "reactstrap";
+import { Collapse, Nav, Navbar, NavbarToggler } from "reactstrap";
 
 import { Link } from "react-router-dom";
 
@@ -13,8 +13,8 @@ function Header() {
   return (
     <div className="nav-fixed-top">
       <Navbar className="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
-        <Link to={"/"}>
-          <NavbarBrand>🦠 COVID19 Tracker</NavbarBrand>
+        <Link className="navbar-brand nav-link" to={"/"}>
+          🦠 COVID19 Tracker
         </Link>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -25,13 +25,6 @@ function Header() {
               </Link>
               <Link className="nav-link" onClick={toggle} to={"/about"}>
                 About
-              </Link>
-              <Link
-                className="nav-link"
-                onClick={toggle}
-                href="https://www.koleenbp.com"
-              >
-                KBPsystem
               </Link>
             </ul>
           </Nav>
