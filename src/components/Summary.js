@@ -11,7 +11,7 @@ function Summary() {
   async function getData() {
     setTimeout(() => {
       fetch(covidEndPointAll)
-        .then(res => res.json())
+        .then((res) => res.json())
         .then(setData);
     }, 100);
   }
@@ -23,7 +23,7 @@ function Summary() {
   const chartSeries = [
     Number(data.recovered),
     Number(data.cases),
-    Number(data.deaths)
+    Number(data.deaths),
   ];
 
   const chartOptions = {
@@ -34,19 +34,19 @@ function Summary() {
         breakpoint: 1000,
         options: {
           legend: {
-            position: "bottom"
-          }
-        }
-      }
+            position: "bottom",
+          },
+        },
+      },
     ],
     legend: {
       show: true,
-      position: "bottom"
+      position: "bottom",
     },
     title: {
       text: "Global Status",
-      align: "center"
-    }
+      align: "center",
+    },
   };
 
   return (
