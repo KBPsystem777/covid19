@@ -14,7 +14,10 @@ function Header() {
     <div className="nav-fixed-top">
       <Navbar className="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
         <Link className="navbar-brand nav-link" to={"/"}>
-          🦠 COVID19 Tracker
+          <span role="img" aria-label="biohazard">
+            ☣️
+          </span>{" "}
+          COVID19 Tracker
         </Link>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
