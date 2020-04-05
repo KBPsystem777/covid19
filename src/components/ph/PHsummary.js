@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Loader from "react-loader-spinner";
 
 import Loadable from "react-loadable";
