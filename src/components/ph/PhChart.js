@@ -67,10 +67,7 @@ function PhChart() {
                 <p>Age: {cases.age}</p>
                 <p>Gender: {cases.gender}</p>
                 <p>Nationality: {cases.nationality}</p>
-                <p>
-                  Travel History Abroad?:{" "}
-                  {cases.had_recent_travel_history_abroad}
-                </p>
+                <p>Travel History Abroad? {cases.travel_history}</p>
                 <p>Admitted: {cases.hospital_admitted_to}</p>
                 <p>Address: {cases.resident_of}</p>
               </div>
