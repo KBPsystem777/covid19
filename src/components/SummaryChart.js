@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Chart from "react-apexcharts";
 import "./app.css";
 
-const covidEndPointAll = "https://coronavirus-19-api.herokuapp.com/all";
+const covidEndPointAll = "https://corona.lmao.ninja/all";
 
 function SummaryChart() {
   const [data, setData] = useState([]);
@@ -22,8 +22,8 @@ function SummaryChart() {
 
   const chartSeries = [
     Number(data.recovered),
-    Number(data.cases),
     Number(data.deaths),
+    Number(data.active),
   ];
 
   const chartOptions = {
