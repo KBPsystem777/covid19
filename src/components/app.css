@@ -1,3 +1,15 @@
+.border-light {
+  border-radius: 1em !important;
+}
+
+.card {
+  max-width: 25rem !important;
+}
+
+.card-text {
+  text-align: center;
+  font-weight: bold;
+}
 .numbers {
   font-size: 2vh !important;
 }
