@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import NumberFormat from "react-number-format";
 import { Container, Col, Row } from "reactstrap";
+import { Link } from "react-router-dom";
+
 import "./app.css";
 
 import Loadable from "react-loadable";
@@ -56,7 +58,9 @@ function Summary() {
         <Col xs="6" sm="4">
           <Container>
             <div class="card border-light mb-3">
-              <div class="card-header">Affected Countries</div>
+              <div class="card-header">
+                <Link to="/countries">Affected Countries</Link>
+              </div>
               <div class="card-body">
                 <p class="card-text">
                   {" "}
