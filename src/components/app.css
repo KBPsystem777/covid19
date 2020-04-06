@@ -11,6 +11,9 @@
   font-weight: bold;
 }
 
+.country-padding {
+  padding-top: 1em;
+}
 .countries-padding-top {
   padding-top: 3em;
 }
