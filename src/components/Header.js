@@ -23,6 +23,12 @@ function Header() {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto">
             <ul className="navbar-nav mr-auto">
+              <Link className="nav-link" to={"/"} onClick={toggle}>
+                Global
+              </Link>
+              <Link className="nav-link" to={"/countries"} onClick={toggle}>
+                Countries
+              </Link>
               <Link className="nav-link" to={"/ph"} onClick={toggle}>
                 Philippines
               </Link>

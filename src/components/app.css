@@ -10,6 +10,15 @@
   text-align: center;
   font-weight: bold;
 }
+
+.countries-padding-top {
+  padding-top: 3em;
+}
+
+.flag {
+  width: 50%;
+}
+
 .numbers {
   font-size: 2vh !important;
 }
@@ -32,7 +41,7 @@
 }
 
 .ph-padding-top {
-  padding-top: 0em;
+  padding-top: 1em;
 }
 
 .summary-padding {

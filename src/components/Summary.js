@@ -41,7 +41,6 @@ function Summary() {
             <div class="card border-light mb-3">
               <div class="card-header">Active Cases</div>
               <div class="card-body">
-                <h4 class="card-title"></h4>
                 <p class="card-text">
                   {" "}
                   <NumberFormat
@@ -59,7 +58,6 @@ function Summary() {
             <div class="card border-light mb-3">
               <div class="card-header">Affected Countries</div>
               <div class="card-body">
-                <h4 class="card-title"></h4>
                 <p class="card-text">
                   {" "}
                   <NumberFormat
@@ -77,7 +75,6 @@ function Summary() {
             <div class="card border-light mb-3">
               <div class="card-header">People Healed</div>
               <div class="card-body">
-                <h4 class="card-title"></h4>
                 <p class="card-text">
                   {" "}
                   <NumberFormat
@@ -95,7 +92,6 @@ function Summary() {
             <div class="card border-light mb-3">
               <div class="card-header">Deaths</div>
               <div class="card-body">
-                <h4 class="card-title"></h4>
                 <p class="card-text">
                   {" "}
                   <NumberFormat
@@ -113,7 +109,6 @@ function Summary() {
             <div class="card border-light mb-3">
               <div class="card-header">Today's Cases</div>
               <div class="card-body">
-                <h4 class="card-title"></h4>
                 <p class="card-text">
                   {" "}
                   <NumberFormat
@@ -131,7 +126,6 @@ function Summary() {
             <div class="card border-light mb-3">
               <div class="card-header">Today's Deaths</div>
               <div class="card-body">
-                <h4 class="card-title"></h4>
                 <p class="card-text">
                   {" "}
                   <NumberFormat
