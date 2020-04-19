@@ -1,35 +1,37 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { Container, Row, Col } from "reactstrap";
+import { Link } from "react-router-dom";
 import NumberFormat from "react-number-format";
 
-const covidEndPoint = "https://corona.lmao.ninja/countries?sort=cases";
+const covidEndPoint = "https://corona.lmao.ninja/v2/countries?sort=cases";
 
-function PHsummary() {
+function Countries() {
   const [data, setData] = useState([]);
 
   async function getData() {
     setTimeout(() => {
       fetch(covidEndPoint)
-        .then((res) => res.json())
+        .then(res => res.json())
         .then(setData);
     }, 100);
   }
 
   useEffect(() => {
     getData();
+    document.title = `Countries`;
   }, []);
-  console.log(data);
+
   return (
     <div className="container summary-padding">
       <h1 className="text-center country-padding">
-        Countries Affected: {data.length + 1}
+        Countries Affected: {data.length}
       </h1>
-      <Container className="countries-padding-top">
+      <Container className="countries-padding-top container-fluid">
         {data.map((country, index) => {
           return (
             <Fragment key={index}>
               <div className="jumbotron">
-                <Row>
+                <Row className="container-fluid">
                   <Col xs="6">
                     <img
                       className="flag"
@@ -38,7 +40,9 @@ function PHsummary() {
                     />
                   </Col>
                   <Col xs="6">
-                    <h3>{country.country}</h3>
+                    <Link to={"/covid"}>
+                      <h5>{country.country}</h5>
+                    </Link>
                     <p>
                       Cases:{" "}
                       <NumberFormat
@@ -82,4 +86,4 @@ function PHsummary() {
   );
 }
 
-export default PHsummary;
+export default Countries;
