@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Loader from "react-loader-spinner";
-
+import NumberFormat from "react-number-format";
 import Loadable from "react-loadable";
 
 const covidEndPoint = "https://coronavirus-ph-api.herokuapp.com/cases";
@@ -18,7 +18,7 @@ const LoadablePhChart = Loadable({
         className="text-center"
       />
     );
-  },
+  }
 });
 
 function PHsummary() {
@@ -27,7 +27,7 @@ function PHsummary() {
   async function getData() {
     setTimeout(() => {
       fetch(covidEndPoint)
-        .then((res) => res.json())
+        .then(res => res.json())
         .then(setData);
     }, 100);
   }
@@ -38,9 +38,16 @@ function PHsummary() {
 
   return (
     <div className="container summary-padding">
-      <h1 className="text-center">🦠 Philippines</h1>
+      <h1 className="text-center">Philippines</h1>
       <div>
-        <h2 className="ph-title-center">Confirmed Cases: {data.length}</h2>
+        <h2 className="ph-title-center">
+          Confirmed Cases:<span> </span>
+          <NumberFormat
+            value={data.length}
+            displayType={"text"}
+            thousandSeparator={true}
+          />{" "}
+        </h2>
         <div className="ph-padding-top">
           <LoadablePhChart />
         </div>
