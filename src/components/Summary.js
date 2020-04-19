@@ -7,13 +7,13 @@ import "./app.css";
 
 import Loadable from "react-loadable";
 
-const covidEndPointAll = "https://corona.lmao.ninja/all";
+const covidEndPointAll = "https://corona.lmao.ninja/v2/all";
 
 const LoadableSumChart = Loadable({
   loader: () => import("./SummaryChart"),
   loading() {
     return <div>Loading Data...</div>;
-  },
+  }
 });
 
 function Summary() {
@@ -22,7 +22,7 @@ function Summary() {
   async function getData() {
     setTimeout(() => {
       fetch(covidEndPointAll)
-        .then((res) => res.json())
+        .then(res => res.json())
         .then(setData);
     }, 100);
   }
@@ -40,10 +40,10 @@ function Summary() {
       <Row className="jumbotron">
         <Col sm="4">
           <Container>
-            <div class="card border-light mb-3">
-              <div class="card-header">Active Cases</div>
-              <div class="card-body">
-                <p class="card-text">
+            <div className="card border-light mb-3">
+              <div className="card-header">Active Cases</div>
+              <div className="card-body">
+                <p className="card-text">
                   {" "}
                   <NumberFormat
                     value={data.active}
@@ -57,12 +57,12 @@ function Summary() {
         </Col>
         <Col xs="6" sm="4">
           <Container>
-            <div class="card border-light mb-3">
-              <div class="card-header">
+            <div className="card border-light mb-3">
+              <div className="card-header">
                 <Link to="/countries">Affected Countries</Link>
               </div>
-              <div class="card-body">
-                <p class="card-text">
+              <div className="card-body">
+                <p className="card-text">
                   {" "}
                   <NumberFormat
                     value={data.affectedCountries}
@@ -76,10 +76,10 @@ function Summary() {
         </Col>
         <Col xs="6" sm="4">
           <Container>
-            <div class="card border-light mb-3">
-              <div class="card-header">People Healed</div>
-              <div class="card-body">
-                <p class="card-text">
+            <div className="card border-light mb-3">
+              <div className="card-header">People Healed</div>
+              <div className="card-body">
+                <p className="card-text">
                   {" "}
                   <NumberFormat
                     value={data.recovered}
@@ -93,10 +93,10 @@ function Summary() {
         </Col>
         <Col sm="4">
           <Container>
-            <div class="card border-light mb-3">
-              <div class="card-header">Deaths</div>
-              <div class="card-body">
-                <p class="card-text">
+            <div className="card border-light mb-3">
+              <div className="card-header">Deaths</div>
+              <div className="card-body">
+                <p className="card-text">
                   {" "}
                   <NumberFormat
                     value={data.deaths}
@@ -110,10 +110,10 @@ function Summary() {
         </Col>
         <Col xs="6" sm="4">
           <Container>
-            <div class="card border-light mb-3">
-              <div class="card-header">Today's Cases</div>
-              <div class="card-body">
-                <p class="card-text">
+            <div className="card border-light mb-3">
+              <div className="card-header">Today's Cases</div>
+              <div className="card-body">
+                <p className="card-text">
                   {" "}
                   <NumberFormat
                     value={data.todayCases}
@@ -127,10 +127,10 @@ function Summary() {
         </Col>
         <Col xs="6" sm="4">
           <Container>
-            <div class="card border-light mb-3">
-              <div class="card-header">Today's Deaths</div>
-              <div class="card-body">
-                <p class="card-text">
+            <div className="card border-light mb-3">
+              <div className="card-header">Today's Deaths</div>
+              <div className="card-body">
+                <p className="card-text">
                   {" "}
                   <NumberFormat
                     value={data.todayDeaths}

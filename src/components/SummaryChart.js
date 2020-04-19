@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Chart from "react-apexcharts";
 import "./app.css";
 
-const covidEndPointAll = "https://corona.lmao.ninja/all";
+const covidEndPointAll = "https://corona.lmao.ninja/v2/all";
 
 function SummaryChart() {
   const [data, setData] = useState([]);
@@ -11,7 +11,7 @@ function SummaryChart() {
   async function getData() {
     setTimeout(() => {
       fetch(covidEndPointAll)
-        .then((res) => res.json())
+        .then(res => res.json())
         .then(setData);
     }, 100);
   }
@@ -23,7 +23,7 @@ function SummaryChart() {
   const chartSeries = [
     Number(data.recovered),
     Number(data.deaths),
-    Number(data.active),
+    Number(data.active)
   ];
 
   const chartOptions = {
@@ -34,19 +34,19 @@ function SummaryChart() {
         breakpoint: 1000,
         options: {
           legend: {
-            position: "bottom",
-          },
-        },
-      },
+            position: "bottom"
+          }
+        }
+      }
     ],
     legend: {
       show: true,
-      position: "bottom",
+      position: "bottom"
     },
     title: {
       text: "Global Status",
-      align: "center",
-    },
+      align: "center"
+    }
   };
 
   return (
