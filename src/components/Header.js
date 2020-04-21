@@ -29,6 +29,9 @@ function Header() {
               <Link className="nav-link" to={"/countries"} onClick={toggle}>
                 Countries
               </Link>
+              <Link className="nav-link" to={"/news"} onClick={toggle}>
+                COVID News
+              </Link>
               <Link className="nav-link" to={"/ph"} onClick={toggle}>
                 Philippines
               </Link>
