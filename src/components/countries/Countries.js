@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { Container, Row, Col } from "reactstrap";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import NumberFormat from "react-number-format";
 
 const covidEndPoint = "https://corona.lmao.ninja/v2/countries?sort=cases";
@@ -11,7 +11,7 @@ function Countries() {
   async function getData() {
     setTimeout(() => {
       fetch(covidEndPoint)
-        .then(res => res.json())
+        .then((res) => res.json())
         .then(setData);
     }, 100);
   }
@@ -40,9 +40,7 @@ function Countries() {
                     />
                   </Col>
                   <Col xs="6">
-                    <Link to={"/covid"}>
-                      <h5>{country.country}</h5>
-                    </Link>
+                    <h5>{country.country}</h5>
                     <p>
                       Cases:{" "}
                       <NumberFormat
